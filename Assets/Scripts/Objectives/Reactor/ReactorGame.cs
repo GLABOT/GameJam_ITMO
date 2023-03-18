@@ -107,6 +107,8 @@ public class ReactorGame : MonoBehaviour
         if (distance > 250)
         {
             result = "Неудачно";
+            GameObject reactor = GameObject.Find("Reactor");
+            Instantiate(ParticleSpawner.instance.Smoke, reactor.transform.position, ParticleSpawner.instance.Smoke.transform.rotation);
         }
         else
         {
