@@ -6,9 +6,11 @@ public class RebootReactor : MonoBehaviour
 {
     public static RebootReactor instance;
 
-    bool rebootStarted = false;
+    bool infoShown = false;
+    public bool rebootStarted = false;
     bool holdEnded = false;
     bool rebooted = false;
+    
     
     private float ButtonDownTimer = 5;
     private float ButtonDownTimerDelta;
@@ -21,18 +23,22 @@ public class RebootReactor : MonoBehaviour
         ButtonDownTimerDelta = ButtonDownTimer;
     }
 
-    public void Reboot() {
-        //запуск анимации
-        rebootStarted = true;
-        Debug.Log("Rebooting reactor");
-        Information.instance.ChangeText("Держите R чтобы крутить вентиль");
-        Information.instance.GetComponent<ShowOrHideUI>().Show();
-    }
+    //public void ShowInfo() {
+    //    //запуск анимации
+    //    Information.instance.ChangeText("Держите R чтобы крутить вентиль");
+    //    Information.instance.GetComponent<ShowOrHideUI>().Show();
+    //}
 
     private void Update()
     {
         if (rebooted)
             return;
+
+        //if (!infoShown && rebootStarted)
+        //{
+        //    ShowInfo();
+        //}
+
 
         if (rebootStarted)
         {

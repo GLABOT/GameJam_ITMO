@@ -7,6 +7,8 @@ public class StartObjective : MonoBehaviour
 {
     [SerializeField]
     private string ObjectiveText = "Нажмите E";
+    [SerializeField]
+    private KeyCode button;
 
     private Objective objective;
 
@@ -34,7 +36,7 @@ public class StartObjective : MonoBehaviour
 
         if (distance < 2)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(button))
             {
                 InformationManager.Hide();
                 objective.StartObjective();

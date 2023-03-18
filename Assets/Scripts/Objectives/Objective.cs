@@ -10,7 +10,7 @@ public class Objective : MonoBehaviour
             ReactorGame.instance.miniGameStarted = true;
 
         if (gameObject.tag == "RebootReactor")
-            RebootReactor.instance.Reboot();
+            RebootReactor.instance.rebootStarted = true;
 
 
     }
