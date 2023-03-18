@@ -1,34 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class Information : MonoBehaviour
 {
     public static Information instance = null;
 
-    private TextMeshPro TextMesh;
+    private Text Text;
 
     private void Start()
     {
         if (instance == null)
             instance = this;
 
-        TextMesh = GetComponent<TextMeshPro>();
+        Text = GetComponent<Text>();
     }
 
     public void ChangeText(string newText)
     {
-        TextMesh.text = newText;
+        Text.text = newText;
     }
 
-    private void ShowText()
+    public void ShowText()
     {
-
+        gameObject.LeanScale(Vector3.one, .1f).setEaseInBack();
+      
     }
 
-    private void HideText()
+    public void HideText()
     {
+        gameObject.LeanScale(Vector3.zero, .1f).setEaseInBack();
 
     }
 
