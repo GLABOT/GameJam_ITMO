@@ -12,6 +12,11 @@ public class Objective : MonoBehaviour
         if (gameObject.tag == "RebootReactor")
             RebootReactor.instance.rebootStarted = true;
 
+        if (gameObject.tag == "CourseControl")
+        {
+            StartCoroutine(CourseControl.instance.ShowCourse());
+        }
+
 
     }
 }

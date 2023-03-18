@@ -39,8 +39,8 @@ public class StartObjective : MonoBehaviour
             if (Input.GetKeyDown(button))
             {
                 InformationManager.Hide();
-                objective.StartObjective();
                 ObjectiveStarted = true;
+                objective.StartObjective();
                 return;
             }
 
