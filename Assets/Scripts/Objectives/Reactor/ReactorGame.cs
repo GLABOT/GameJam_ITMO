@@ -14,15 +14,15 @@ public class ReactorGame : MonoBehaviour
 
     private GameObject Pointer;
 
-    private bool endReached;
-
     public bool miniGameStarted;
     private bool solveZoneGenerated;
     private bool canMovePointer;
+    private bool gameOver;
 
 
     [SerializeField]
     private float speed;
+    private bool worldPositionStays;
 
     private void Start()
     {
@@ -41,15 +41,17 @@ public class ReactorGame : MonoBehaviour
 
     private void Update()
     {
-
         if (miniGameStarted)
         {
+            StopPointer();
 
             if (canMovePointer)
                 StartCoroutine(MovePointerCoroutine());
 
             if (!solveZoneGenerated)
             {
+                FirstPersonController.instance.cameraCanMove = false;
+
                 UIManager.Show();
                 GenerateSolveZone();
             }
@@ -69,11 +71,53 @@ public class ReactorGame : MonoBehaviour
     {
         canMovePointer = false;
         Pointer.LeanMoveLocal(EndPos.localPosition, speed);
-        endReached = false;
         yield return new WaitForSeconds(speed);
-        endReached = true;
         Pointer.LeanMoveLocal(StartPos.localPosition, speed);
         yield return new WaitForSeconds(speed);
         canMovePointer = true;
     }
+
+    private void StopPointer()
+    {
+        if (gameOver)
+            return;
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            gameOver = true;
+            GameObject newPointer = Instantiate(Pointer, Pointer.transform.localPosition, Quaternion.identity);
+            newPointer.transform.SetParent(gameObject.transform, worldPositionStays);
+            newPointer.transform.localPosition = Pointer.transform.localPosition;
+
+            if (Pointer != null)
+            Destroy(Pointer);
+
+            CheckPointerPosition(newPointer);
+        }
+    }
+
+    private void CheckPointerPosition(GameObject newPointer)
+    {
+
+        float distance = Vector3.Distance(newPointer.transform.localPosition, SolveZone.transform.localPosition);
+        Debug.Log("Distance = " + distance);
+
+        string result;
+
+        if (distance > 250)
+        {
+            result = "Неудачно";
+        }
+        else
+        {
+            result = "Удачно!";
+        }
+
+        FirstPersonController.instance.cameraCanMove = true;
+        UIManager.Hide();
+        Information.instance.ChangeText(result);
+        StartCoroutine(Information.instance.GetComponent<ShowOrHideUI>().ShowAsMessage());
+
+    }
+    
 }

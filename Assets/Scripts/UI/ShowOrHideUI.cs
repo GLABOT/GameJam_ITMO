@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShowOrHideUI : MonoBehaviour
 {
+    private float messageTime = 2f;
+
     public void Show()
     {
         gameObject.LeanScale(Vector3.one, .1f).setEaseInBack();
@@ -15,5 +17,12 @@ public class ShowOrHideUI : MonoBehaviour
     {
         gameObject.LeanScale(Vector3.zero, .1f).setEaseInBack();
         Debug.Log(gameObject.name + "  hided");
+    }
+
+    public IEnumerator ShowAsMessage()
+    {
+        Show();
+        yield return new WaitForSeconds(messageTime);
+        Hide();
     }
 }

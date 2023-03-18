@@ -295,10 +295,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -384,8 +384,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.41331387, y: 0}
   m_AnchorMax: {x: 0.59256065, y: 1}
-  m_AnchoredPosition: {x: 0.25682068, y: 0.2859993}
-  m_SizeDelta: {x: 0.5136001, y: 0.3880005}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &491083498
 MonoBehaviour:
@@ -660,8 +660,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.03330991, y: 0.117000006}
   m_AnchorMax: {x: 0.9638306, y: 0.21800001}
-  m_AnchoredPosition: {x: 1, y: 0.5}
-  m_SizeDelta: {x: 1.9063721, y: -1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929071173
 MonoBehaviour:
@@ -986,7 +986,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.074, y: 0.23}
   m_AnchorMax: {x: 0.08465693, y: 0.372}
-  m_AnchoredPosition: {x: -0.7000122, y: -0.1000061}
+  m_AnchoredPosition: {x: -0.70007324, y: -0.1000061}
   m_SizeDelta: {x: 3.5463867, y: 1.1269989}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739589982
@@ -1303,7 +1303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.029268656, y: 0}
   m_AnchorMax: {x: 0.95600003, y: 0.93484336}
-  m_AnchoredPosition: {x: 1.0255127, y: 1.053009}
+  m_AnchoredPosition: {x: 1.0255127, y: 1.0529785}
   m_SizeDelta: {x: -0.5305786, y: 2.6099854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2057119300
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057119298}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
