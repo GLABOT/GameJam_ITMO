@@ -15,6 +15,7 @@ public class ReactorGame : MonoBehaviour
     private GameObject Pointer;
     private GameObject SmokeParticle;
 
+    private bool infoShown;
     public bool miniGameStarted;
     private bool solveZoneGenerated;
     private bool canMovePointer;
@@ -40,10 +41,24 @@ public class ReactorGame : MonoBehaviour
 
     }
 
+    private void ShowInfo()
+    {
+        if (infoShown)
+            return;
+
+        Information.instance.ChangeText("Нажмите R когда указатель будет в зеленой области!");
+        Information.instance.GetComponent<ShowOrHideUI>().Show();
+        infoShown = true;
+
+    }
+
     private void Update()
     {
         if (miniGameStarted)
         {
+
+
+            ShowInfo();
             StopPointer();
 
             if (canMovePointer)
@@ -115,6 +130,8 @@ public class ReactorGame : MonoBehaviour
         {
             result = "Удачно!";
         }
+
+        Information.instance.GetComponent<ShowOrHideUI>().Hide();
 
         FirstPersonController.instance.cameraCanMove = true;
         UIManager.Hide();

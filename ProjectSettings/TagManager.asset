@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Reactor
   - RebootReactor
+  - CourseControl
   layers:
   - Default
   - TransparentFX
