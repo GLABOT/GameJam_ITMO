@@ -30,16 +30,18 @@ public class StartObjective : MonoBehaviour
         if (ObjectiveStarted)
             return;
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            InformationManager.Hide();
-            objective.StartObjective();
-            ObjectiveStarted = true;
-            return;
-        }
+        
 
         if (distance < 2)
         {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                InformationManager.Hide();
+                objective.StartObjective();
+                ObjectiveStarted = true;
+                return;
+            }
+
             if (!IsShown)
             {
                 Information.instance.ChangeText(ObjectiveText);

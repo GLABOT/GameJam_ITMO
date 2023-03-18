@@ -9,7 +9,7 @@ public class Information : MonoBehaviour
 
     private Text Text;
 
-    private void Start()
+    private void Awake()
     {
         if (instance == null)
             instance = this;

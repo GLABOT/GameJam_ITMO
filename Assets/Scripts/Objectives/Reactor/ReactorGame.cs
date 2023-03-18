@@ -13,6 +13,7 @@ public class ReactorGame : MonoBehaviour
     private RectTransform SolveZone;
 
     private GameObject Pointer;
+    private GameObject SmokeParticle;
 
     public bool miniGameStarted;
     private bool solveZoneGenerated;
@@ -108,7 +109,7 @@ public class ReactorGame : MonoBehaviour
         {
             result = "Неудачно";
             GameObject reactor = GameObject.Find("Reactor");
-            Instantiate(ParticleSpawner.instance.Smoke, reactor.transform.position, ParticleSpawner.instance.Smoke.transform.rotation);
+            SmokeParticle = Instantiate(ParticleSpawner.instance.Smoke, reactor.transform.position, ParticleSpawner.instance.Smoke.transform.rotation);
         }
         else
         {
@@ -120,6 +121,11 @@ public class ReactorGame : MonoBehaviour
         Information.instance.ChangeText(result);
         StartCoroutine(Information.instance.GetComponent<ShowOrHideUI>().ShowAsMessage());
 
+    }
+
+    public void FixSmoke()
+    {
+        Destroy(SmokeParticle);
     }
     
 }

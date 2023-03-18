@@ -8,5 +8,10 @@ public class Objective : MonoBehaviour
     {
         if (gameObject.tag == "Reactor")
             ReactorGame.instance.miniGameStarted = true;
+
+        if (gameObject.tag == "RebootReactor")
+            RebootReactor.instance.Reboot();
+
+
     }
 }
