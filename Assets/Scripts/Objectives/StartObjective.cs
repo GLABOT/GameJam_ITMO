@@ -5,23 +5,35 @@ using UnityEngine;
 
 public class StartObjective : MonoBehaviour
 {
+    [SerializeField]
+    private string ObjectiveText = "Нажмите E";
+
+    private Objective objective;
+
     bool IsShown;
     bool ObjectiveStarted;
+
+    ShowOrHideUI InformationManager;
+
+    private void Start()
+    {
+        objective = GetComponent<Objective>();
+        InformationManager = Information.instance.GetComponent<ShowOrHideUI>();
+    }
 
     void Update()
     {
         float distance;
 
         distance = Vector3.Distance(Player.instance.transform.position, transform.position);
-        Debug.Log(distance);
 
         if (ObjectiveStarted)
             return;
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("E pressed");
-            Information.instance.HideText();
+            InformationManager.Hide();
+            objective.StartObjective();
             ObjectiveStarted = true;
             return;
         }
@@ -30,8 +42,8 @@ public class StartObjective : MonoBehaviour
         {
             if (!IsShown)
             {
-                Information.instance.ChangeText("Нажмите E");
-                Information.instance.ShowText();
+                Information.instance.ChangeText(ObjectiveText);
+                InformationManager.Show();
                 IsShown = true;
             }
         }
@@ -39,7 +51,7 @@ public class StartObjective : MonoBehaviour
         {
             if(IsShown)
             {
-                Information.instance.HideText();
+                InformationManager.Hide();
                 IsShown = false;
             }
         }

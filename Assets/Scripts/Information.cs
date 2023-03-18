@@ -22,17 +22,5 @@ public class Information : MonoBehaviour
         Text.text = newText;
     }
 
-    public void ShowText()
-    {
-        gameObject.LeanScale(Vector3.one, .1f).setEaseInBack();
-      
-    }
-
-    public void HideText()
-    {
-        gameObject.LeanScale(Vector3.zero, .1f).setEaseInBack();
-
-    }
-
 
 }

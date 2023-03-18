@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
-    
+   public void StartObjective()
+    {
+        if (gameObject.tag == "Reactor")
+            ReactorGame.instance.miniGameStarted = true;
+    }
 }
