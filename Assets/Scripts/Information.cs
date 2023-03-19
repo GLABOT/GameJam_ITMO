@@ -7,6 +7,7 @@ public class Information : MonoBehaviour
 {
     public static Information instance = null;
 
+    private ShowOrHideUI infoui;
     private Text Text;
 
     private void Awake()
@@ -14,12 +15,19 @@ public class Information : MonoBehaviour
         if (instance == null)
             instance = this;
 
+        infoui = GetComponent<ShowOrHideUI>();
         Text = GetComponent<Text>();
     }
 
     public void ChangeText(string newText)
     {
         Text.text = newText;
+        infoui.Show();
+    }
+
+    public void HideInfo()
+    {
+        infoui.Hide();
     }
 
 

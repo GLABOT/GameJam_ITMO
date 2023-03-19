@@ -17,6 +17,13 @@ public class Objective : MonoBehaviour
             StartCoroutine(CourseControl.instance.ShowCourse());
         }
 
+        if (gameObject.tag == "Clicker")
+        {
+            ClickerMiniGame.instance.ClickerStarted = true;
+            ClickerMiniGame.instance.GetComponent<ShowOrHideUI>().Show();
+            Information.instance.ChangeText("Нажимайте на R много раз!");
+        }
+
 
     }
 }

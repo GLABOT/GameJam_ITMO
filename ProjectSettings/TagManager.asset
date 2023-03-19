@@ -8,6 +8,7 @@ TagManager:
   - RebootReactor
   - CourseControl
   - Music
+  - Clicker
   layers:
   - Default
   - TransparentFX

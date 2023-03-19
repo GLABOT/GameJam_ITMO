@@ -4,26 +4,37 @@ using UnityEngine.UI;
 
 public class ClickerMiniGame : MonoBehaviour
 {
+    public static ClickerMiniGame instance = null;
+
     [SerializeField] private Slider m_Slider;
     [SerializeField] private GameObject m_Message;
     [SerializeField] private float _loseTime = 10f;
 
-    private KeyCode _interactionButton = KeyCode.O;
+    private KeyCode _interactionButton = KeyCode.R;
     private float _sumValue = 0.05f;
     private float _loseTimeDelta;
 
-    private string _winMassage = "Хорошая работа!";
-    private string _loseMassage = "Неудача..";
+    private string _winMassage = "Good Job!";
+    private string _loseMassage = "Not good...";
 
     private float _exitGameTimer = 1f;
 
+    public bool ClickerStarted;
+
     private void Start()
     {
+        if (instance == null)
+            instance = this;
+
+
         _loseTimeDelta = _loseTime;
     }
 
     private void Update()
     {
+        if (!ClickerStarted)
+            return;
+
         InputCheck();
 
         if (m_Slider.value == 1)
@@ -53,6 +64,7 @@ public class ClickerMiniGame : MonoBehaviour
 
         m_Message.gameObject.SetActive(false);
         gameObject.SetActive(false);
+        Information.instance.HideInfo();
     }
 
     private void Lose()

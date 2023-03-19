@@ -47,7 +47,6 @@ public class ReactorGame : MonoBehaviour
             return;
 
         Information.instance.ChangeText("Нажмите R когда указатель будет в зеленой области!");
-        Information.instance.GetComponent<ShowOrHideUI>().Show();
         infoShown = true;
 
 
