@@ -39,6 +39,7 @@ public class CourseControl : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         courseStarted = true;
         GetComponent<ShowOrHideUI>().Show();
+        SoundsManager.instance.PlaySound("Math",true);
     }
 
     private void Update()
@@ -87,6 +88,13 @@ public class CourseControl : MonoBehaviour
             GetComponent<ShowOrHideUI>().Hide();
             Information.instance.ChangeText("Вы верно нашли все три координаты и поправили курс корабля!");
             StartCoroutine(Information.instance.GetComponent<ShowOrHideUI>().ShowAsMessage());
+
+            TimeForQuests.instance.StopTimer();
+            CurrentQuest.instance.HideQuest();
+            SoundsManager.instance.PlaySound("Math", false);
+            SoundsManager.instance.PlaySound("Signal", false);
+            SoundsManager.instance.PlaySound("Good", true);
+
         }
         
     }
