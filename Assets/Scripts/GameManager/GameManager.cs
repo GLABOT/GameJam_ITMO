@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public StartObjective CourseControl;
     public StartObjective Submarine;
     public StartObjective Clicker;
+    public StartObjective Ventil;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
         CourseControl.enabled = false;
         Submarine.enabled = false;
         Clicker.enabled = false;
+        Ventil.enabled = false;
 
         StartCoroutine(ListenIntro());
     }
@@ -39,8 +41,9 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator WaitForPlayerToCheckTheMap()
     {
-        yield return new WaitForSeconds(30f);
+        yield return new WaitForSeconds(10f);
         Reactor.enabled = true;
+        Ventil.enabled = true;
         StartCoroutine(ReactorMiniGame());
     }
 
