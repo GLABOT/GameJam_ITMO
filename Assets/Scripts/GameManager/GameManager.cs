@@ -6,12 +6,20 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
+    public StartObjective Reactor;
+    public StartObjective CourseControl;
+    public StartObjective Submarine;
+    public StartObjective Clicker;
+
     private void Start()
     {
         if (instance == null)
             instance = this;
 
-
+        Reactor.enabled = false;
+        CourseControl.enabled = false;
+        Submarine.enabled = false;
+        Clicker.enabled = false;
 
         StartCoroutine(ListenIntro());
     }
@@ -28,9 +36,11 @@ public class GameManager : MonoBehaviour
         StartCoroutine(WaitForPlayerToCheckTheMap());
     }
 
+
     public IEnumerator WaitForPlayerToCheckTheMap()
     {
         yield return new WaitForSeconds(30f);
+        Reactor.enabled = true;
         StartCoroutine(ReactorMiniGame());
     }
 
@@ -41,6 +51,7 @@ public class GameManager : MonoBehaviour
         SoundsManager.instance.PlaySound("Signal", true);
         TimeForQuests.instance.StartTimer(20);
         yield return new WaitForSeconds(30f);
+        CourseControl.enabled = true;
         StartCoroutine(CourseCorrectionMiniGame());
     }
 
@@ -51,6 +62,7 @@ public class GameManager : MonoBehaviour
         CurrentQuest.instance.ChangeText("Скорректируйте курс подлодки вручную");
         TimeForQuests.instance.StartTimer(15);
         yield return new WaitForSeconds(18f);
+        Clicker.enabled = true;
         StartCoroutine(TurnOnTheLight());
     }
 
@@ -60,14 +72,15 @@ public class GameManager : MonoBehaviour
         CurrentQuest.instance.ChangeText("Включите свет, перезапустив генератор");
         TimeForQuests.instance.StartTimer(20);
         yield return new WaitForSeconds(25f);
+        Submarine.enabled = true;
         StartCoroutine(HealthProblems());
     }
 
     private IEnumerator HealthProblems()
     {
         SoundsManager.instance.PlaySound("Signal", true);
-        CurrentQuest.instance.ChangeText("Исправьте систему жизнеобеспечения");
-        SoundsManager.instance.PlaySound("HealthSupport", true);
+        CurrentQuest.instance.ChangeText("На нас напали! Бегите в отсек с торпедами!");
+        SoundsManager.instance.PlaySound("Torpedo", true);
         TimeForQuests.instance.StartTimer(20);
         yield return new WaitForSeconds(25f);
         

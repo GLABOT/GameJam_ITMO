@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -876,6 +876,156 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631762778}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1926807060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926807062}
+  - component: {fileID: 1926807061}
+  m_Layer: 0
+  m_Name: SoundsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1926807061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926807060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704eb46a9dec9442da57b4d3604e6990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Good
+    audioClip: {fileID: 8300000, guid: 434e74ccf8f374444895fbc2d196500d, type: 3}
+    volume: 0.702
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: ReactorBad
+    audioClip: {fileID: 8300000, guid: dc3f6cb46adb14abd80193ba31e041df, type: 3}
+    volume: 0.464
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Math
+    audioClip: {fileID: 8300000, guid: 35c5fcc4399e8476daa7bc2729b56256, type: 3}
+    volume: 0.443
+    pitch: 1
+    loop: 1
+    audioSource: {fileID: 0}
+  - name: Signal
+    audioClip: {fileID: 8300000, guid: 035691a42747642fcb869cd7363fee5e, type: 3}
+    volume: 0.578
+    pitch: 1
+    loop: 1
+    audioSource: {fileID: 0}
+  - name: SoundTrack
+    audioClip: {fileID: 8300000, guid: ee0d10b33ee7544c28db49c11daf2fc2, type: 3}
+    volume: 0.323
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Welcome
+    audioClip: {fileID: 8300000, guid: 2ae93d29a6103488c9835de5320f29d0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: HowItGoes
+    audioClip: {fileID: 8300000, guid: 49c2c7f109ff44b4dba8cfc6705386f0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: CommunicationCenter
+    audioClip: {fileID: 8300000, guid: 72c539b29b1e44b598b94a1a9e981cb3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: HealthZone
+    audioClip: {fileID: 8300000, guid: 2df62b8e3f8e0429aaa843e19a2e742d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: ReactorPlace
+    audioClip: {fileID: 8300000, guid: 6d6e1823fab2e4b24a9cb420a8d4cd62, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Torpedo
+    audioClip: {fileID: 8300000, guid: 51cbc5c2d95a549b993725fcb34ae73f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: CursError
+    audioClip: {fileID: 8300000, guid: 49e20ed2e9d0c451e8e5c6ef95212fa3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Enemy
+    audioClip: {fileID: 8300000, guid: a8c40ce4fbe2a4416bb6b86a2f593f4d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: HealthSupport
+    audioClip: {fileID: 8300000, guid: a1e5d19359f954cb38005e481fff5672, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: ReactorTrouble
+    audioClip: {fileID: 8300000, guid: 596bf265fe8fe4ccdbca47c1b1b7981a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: GoodJob
+    audioClip: {fileID: 8300000, guid: 0088616c631c14e14be7023070048829, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: End
+    audioClip: {fileID: 8300000, guid: edbef5ef85079417d982f5a8f208c1ab, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  mainMixer: {fileID: 24300002, guid: e53c05e5f914f41338a5ec4e6b17ad9a, type: 2}
+  effectsMixer: {fileID: 24300002, guid: d966ecf2871c441ca8507649ab8f64cb, type: 2}
+  mainTheme: SoundTrack
+--- !u!4 &1926807062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926807060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1937415775
 GameObject:
