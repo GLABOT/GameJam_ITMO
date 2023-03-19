@@ -51,7 +51,7 @@ public class RebootReactor : MonoBehaviour
                 Information.instance.GetComponent<ShowOrHideUI>().Hide();
                 rebooted = true;
                 Debug.Log("Успешно!");
-                SoundsManager.instance.PlaySound("ReactorGood", true);
+                SoundsManager.instance.PlaySound("Good", true);
             }
         }
     }
