@@ -39,7 +39,9 @@ public class RebootReactor : MonoBehaviour
 
             if (holdEnded && ButtonDownTimerDelta > 0)
             {
+                //SoundAndMusic.instance.SpinCircle();
                 ButtonDownTimerDelta -= Time.deltaTime;
+
                 Debug.Log("Осталось держать:" + ButtonDownTimerDelta);
             }
 
@@ -49,7 +51,7 @@ public class RebootReactor : MonoBehaviour
                 Information.instance.GetComponent<ShowOrHideUI>().Hide();
                 rebooted = true;
                 Debug.Log("Успешно!");
-                
+                SoundsManager.instance.PlaySound("ReactorGood", true);
             }
         }
     }
