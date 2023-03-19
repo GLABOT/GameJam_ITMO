@@ -51,23 +51,31 @@ public class LifeSupportSystem : MonoBehaviour
 
     private void RandomCombinatrion()
     {
-        int combination = Random.Range(0, 3);
+        int combination = Random.Range(0, 5);
 
         if (combination == 0)
         {
-
             FirstCombintionation();
             return;
-
         }
         if (combination == 1)
         {
             SecondCombintionation();
             return; 
         }
-        else
+        if (combination == 2)
         {
             ThirdCombintionation();
+            return;
+        }
+        if (combination == 3)
+        {
+            ThirdCombintionation();
+            return;
+        }
+        else
+        {
+            FithCombintionation();
             return;
         }
     }
