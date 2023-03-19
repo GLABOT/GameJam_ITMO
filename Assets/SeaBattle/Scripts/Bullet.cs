@@ -14,6 +14,7 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, _direction, _speed * Time.deltaTime);
+        transform.LookAt(_direction);
     }
 
     private void OnCollisionEnter(Collision collision)
