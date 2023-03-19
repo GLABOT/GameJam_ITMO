@@ -87,6 +87,10 @@ public class CourseControl : MonoBehaviour
             GetComponent<ShowOrHideUI>().Hide();
             Information.instance.ChangeText("Вы верно нашли все три координаты и поправили курс корабля!");
             StartCoroutine(Information.instance.GetComponent<ShowOrHideUI>().ShowAsMessage());
+
+            TimeForQuests.instance.StopTimer();
+            CurrentQuest.instance.HideQuest();
+
         }
         
     }

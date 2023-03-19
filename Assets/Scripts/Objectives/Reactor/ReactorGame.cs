@@ -50,6 +50,9 @@ public class ReactorGame : MonoBehaviour
         Information.instance.GetComponent<ShowOrHideUI>().Show();
         infoShown = true;
 
+        TimeForQuests.instance.StopTimer();
+
+
     }
 
     private void Update()
@@ -120,7 +123,7 @@ public class ReactorGame : MonoBehaviour
 
         string result;
 
-        if (distance > 250)
+        if (distance > 300)
         {
             result = "Неудачно";
             GameObject reactor = GameObject.Find("Reactor");
@@ -129,6 +132,8 @@ public class ReactorGame : MonoBehaviour
         else
         {
             result = "Удачно!";
+            CurrentQuest.instance.HideQuest();
+            TimeForQuests.instance.StopTimer();
         }
 
         Information.instance.GetComponent<ShowOrHideUI>().Hide();
@@ -143,6 +148,8 @@ public class ReactorGame : MonoBehaviour
     public void FixSmoke()
     {
         Destroy(SmokeParticle);
+        CurrentQuest.instance.HideQuest();
+        TimeForQuests.instance.StopTimer();
     }
     
 }
