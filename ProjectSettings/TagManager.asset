@@ -9,6 +9,7 @@ TagManager:
   - CourseControl
   - Music
   - Clicker
+  - Health
   layers:
   - Default
   - TransparentFX
