@@ -50,6 +50,7 @@ public class ReactorGame : MonoBehaviour
         Information.instance.GetComponent<ShowOrHideUI>().Show();
         infoShown = true;
 
+
     }
 
     private void Update()
@@ -115,21 +116,29 @@ public class ReactorGame : MonoBehaviour
     private void CheckPointerPosition(GameObject newPointer)
     {
 
+
         float distance = Vector3.Distance(newPointer.transform.localPosition, SolveZone.transform.localPosition);
         Debug.Log("Distance = " + distance);
 
         string result;
 
-        if (distance > 250)
+        if (distance > 300)
         {
             result = "Неудачно";
             GameObject reactor = GameObject.Find("Reactor");
             SmokeParticle = Instantiate(ParticleSpawner.instance.Smoke, reactor.transform.position, ParticleSpawner.instance.Smoke.transform.rotation);
+            SoundsManager.instance.PlaySound("ReactorBad", true);
         }
         else
         {
             result = "Удачно!";
+            CurrentQuest.instance.HideQuest();
+            TimeForQuests.instance.StopTimer();
+            SoundsManager.instance.PlaySound("Signal", false);
+            SoundsManager.instance.PlaySound("Good", true);
+            TimeForQuests.instance.StopTimer();
         }
+
 
         Information.instance.GetComponent<ShowOrHideUI>().Hide();
 
@@ -143,6 +152,10 @@ public class ReactorGame : MonoBehaviour
     public void FixSmoke()
     {
         Destroy(SmokeParticle);
+        CurrentQuest.instance.HideQuest();
+        TimeForQuests.instance.StopTimer();
+        SoundsManager.instance.PlaySound("Signal", false);
+        SoundsManager.instance.PlaySound("Good", true);
     }
     
 }

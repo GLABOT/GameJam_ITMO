@@ -7,6 +7,7 @@ TagManager:
   - Reactor
   - RebootReactor
   - CourseControl
+  - Music
   layers:
   - Default
   - TransparentFX
