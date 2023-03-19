@@ -1708,6 +1708,7 @@ MonoBehaviour:
   CourseControl: {fileID: 495856382}
   Submarine: {fileID: 441847394}
   Clicker: {fileID: 1063106080}
+  Ventil: {fileID: 1528710928}
 --- !u!4 &840056745
 Transform:
   m_ObjectHideFlags: 0
@@ -3042,6 +3043,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8885731684526501912, guid: c0855e846d12f4f7eb7dcf341e9c545a, type: 3}
   m_PrefabInstance: {fileID: 2000442098}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1528710928 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8885731684526501915, guid: c0855e846d12f4f7eb7dcf341e9c545a, type: 3}
+  m_PrefabInstance: {fileID: 2000442098}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ae7d766fab743d58dbf888c29873a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1619543506 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2624776786857411589, guid: 8133e15e9bf479042b60d235416b2e5a, type: 3}
