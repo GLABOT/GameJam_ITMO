@@ -69,6 +69,7 @@ public class SoundManager : MonoBehaviour
     {
 		for (int i = 0; i < transform.childCount; i++)
         {
+			if (transform.GetChild(0).tag != "Music")
 			transform.GetChild(i).GetComponent<AudioSource>().Pause();
         }
     }
