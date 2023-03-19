@@ -26,7 +26,7 @@ public class Objective : MonoBehaviour
 
         if (gameObject.tag == "Health")
         {
-            FadeInOut.sceneEnd = true;
+            //GameObject.FindGameObjectWithTag("SceneController").GetComponent<FadeInOut>().LoadScene("");
         }
 
 
