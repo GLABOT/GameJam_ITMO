@@ -39,6 +39,8 @@ public class CourseControl : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         courseStarted = true;
         GetComponent<ShowOrHideUI>().Show();
+        SoundManager.instance.StopAudio();
+        SoundAndMusic.instance.Mathematics();
     }
 
     private void Update()
@@ -90,6 +92,7 @@ public class CourseControl : MonoBehaviour
 
             TimeForQuests.instance.StopTimer();
             CurrentQuest.instance.HideQuest();
+            StartCoroutine(SoundManager.instance.StopAudioInSecond());
 
         }
         

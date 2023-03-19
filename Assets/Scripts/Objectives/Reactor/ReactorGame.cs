@@ -117,6 +117,7 @@ public class ReactorGame : MonoBehaviour
 
     private void CheckPointerPosition(GameObject newPointer)
     {
+        SoundManager.instance.StopAudio();
 
         float distance = Vector3.Distance(newPointer.transform.localPosition, SolveZone.transform.localPosition);
         Debug.Log("Distance = " + distance);
@@ -128,13 +129,17 @@ public class ReactorGame : MonoBehaviour
             result = "Неудачно";
             GameObject reactor = GameObject.Find("Reactor");
             SmokeParticle = Instantiate(ParticleSpawner.instance.Smoke, reactor.transform.position, ParticleSpawner.instance.Smoke.transform.rotation);
+            SoundAndMusic.instance.KillReactor();
         }
         else
         {
             result = "Удачно!";
             CurrentQuest.instance.HideQuest();
             TimeForQuests.instance.StopTimer();
+            SoundAndMusic.instance.ReactorNice();
         }
+
+        StartCoroutine(SoundManager.instance.StopAudioInSecond());
 
         Information.instance.GetComponent<ShowOrHideUI>().Hide();
 
