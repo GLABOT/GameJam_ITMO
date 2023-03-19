@@ -50,8 +50,6 @@ public class ReactorGame : MonoBehaviour
         Information.instance.GetComponent<ShowOrHideUI>().Show();
         infoShown = true;
 
-        TimeForQuests.instance.StopTimer();
-
 
     }
 
@@ -117,7 +115,7 @@ public class ReactorGame : MonoBehaviour
 
     private void CheckPointerPosition(GameObject newPointer)
     {
-        SoundManager.instance.StopAudio();
+
 
         float distance = Vector3.Distance(newPointer.transform.localPosition, SolveZone.transform.localPosition);
         Debug.Log("Distance = " + distance);
@@ -129,17 +127,18 @@ public class ReactorGame : MonoBehaviour
             result = "Неудачно";
             GameObject reactor = GameObject.Find("Reactor");
             SmokeParticle = Instantiate(ParticleSpawner.instance.Smoke, reactor.transform.position, ParticleSpawner.instance.Smoke.transform.rotation);
-            SoundAndMusic.instance.KillReactor();
+            SoundsManager.instance.PlaySound("ReactorBad", true);
         }
         else
         {
             result = "Удачно!";
             CurrentQuest.instance.HideQuest();
             TimeForQuests.instance.StopTimer();
-            SoundAndMusic.instance.ReactorNice();
+            SoundsManager.instance.PlaySound("Signal", false);
+            SoundsManager.instance.PlaySound("Good", true);
+            TimeForQuests.instance.StopTimer();
         }
 
-        StartCoroutine(SoundManager.instance.StopAudioInSecond());
 
         Information.instance.GetComponent<ShowOrHideUI>().Hide();
 
@@ -155,6 +154,8 @@ public class ReactorGame : MonoBehaviour
         Destroy(SmokeParticle);
         CurrentQuest.instance.HideQuest();
         TimeForQuests.instance.StopTimer();
+        SoundsManager.instance.PlaySound("Signal", false);
+        SoundsManager.instance.PlaySound("Good", true);
     }
     
 }

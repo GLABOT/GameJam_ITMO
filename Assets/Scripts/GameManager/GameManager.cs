@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator ReactorMiniGame()
     {
         CurrentQuest.instance.ChangeText("Решите проблему в реакторе");
-        SoundAndMusic.instance.NewPolomka();
+        SoundsManager.instance.PlaySound("Signal", true);
         TimeForQuests.instance.StartTimer(15);
         yield return new WaitForSeconds(18f);
         StartCoroutine(CourseCorrectionMiniGame());
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator CourseCorrectionMiniGame()
     {
-        SoundAndMusic.instance.NewPolomka();
+        SoundsManager.instance.PlaySound("Signal", true);
         CurrentQuest.instance.ChangeText("Скорректируйте курс подлодки вручную");
         TimeForQuests.instance.StartTimer(15);
         yield return new WaitForSeconds(18f);
