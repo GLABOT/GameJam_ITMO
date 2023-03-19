@@ -817,73 +817,73 @@ MonoBehaviour:
     loop: 0
     audioSource: {fileID: 0}
   - name: Welcome
-    audioClip: {fileID: 8300000, guid: e97a412907f2b4e0fb0d886f7b1ba119, type: 3}
+    audioClip: {fileID: 8300000, guid: 2ae93d29a6103488c9835de5320f29d0, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: HowItGoes
-    audioClip: {fileID: 8300000, guid: ce128eeb54dc8422485bf5ff1aa127d9, type: 3}
+    audioClip: {fileID: 8300000, guid: 49c2c7f109ff44b4dba8cfc6705386f0, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: CommunicationCenter
-    audioClip: {fileID: 8300000, guid: 6d200c88826094bc986c5d969c6bb39a, type: 3}
+    audioClip: {fileID: 8300000, guid: 72c539b29b1e44b598b94a1a9e981cb3, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: HealthZone
-    audioClip: {fileID: 8300000, guid: 029807a83c89444dab530eccd7989edb, type: 3}
+    audioClip: {fileID: 8300000, guid: 2df62b8e3f8e0429aaa843e19a2e742d, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: ReactorPlace
-    audioClip: {fileID: 8300000, guid: d5bb56be425c34457b366f58ab658d2a, type: 3}
+    audioClip: {fileID: 8300000, guid: 6d6e1823fab2e4b24a9cb420a8d4cd62, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: Torpedo
-    audioClip: {fileID: 8300000, guid: 281804bcdacea4949b0043cad117d5dd, type: 3}
+    audioClip: {fileID: 8300000, guid: 51cbc5c2d95a549b993725fcb34ae73f, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: CursError
-    audioClip: {fileID: 8300000, guid: dbcdc71f8d6ab4be0b17795dec19daa5, type: 3}
+    audioClip: {fileID: 8300000, guid: 49e20ed2e9d0c451e8e5c6ef95212fa3, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: Enemy
-    audioClip: {fileID: 8300000, guid: 57a1f878c10cb49b296e40ec23f39ebc, type: 3}
+    audioClip: {fileID: 8300000, guid: a8c40ce4fbe2a4416bb6b86a2f593f4d, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: HealthSupport
-    audioClip: {fileID: 8300000, guid: 16e42ac18bb4b4a8fa92970a77eeb3c6, type: 3}
+    audioClip: {fileID: 8300000, guid: a1e5d19359f954cb38005e481fff5672, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: ReactorTrouble
-    audioClip: {fileID: 8300000, guid: 3bb03ec60d6604d7abdc59fb8c9beccf, type: 3}
+    audioClip: {fileID: 8300000, guid: 596bf265fe8fe4ccdbca47c1b1b7981a, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: GoodJob
-    audioClip: {fileID: 8300000, guid: 94ee92c7ecbbe463c858a83a924d4cd8, type: 3}
+    audioClip: {fileID: 8300000, guid: 0088616c631c14e14be7023070048829, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: End
-    audioClip: {fileID: 8300000, guid: c0ea5942595eb4d4e94e21b629fe9bdf, type: 3}
+    audioClip: {fileID: 8300000, guid: edbef5ef85079417d982f5a8f208c1ab, type: 3}
     volume: 1
     pitch: 1
     loop: 0
