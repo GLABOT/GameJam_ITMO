@@ -79,6 +79,7 @@ public class ClickerMiniGame : MonoBehaviour
         m_Message.gameObject.SetActive(true);
         m_Message.GetComponentInChildren<Text>().text = _winMassage;
         StartCoroutine(ExitGame());
+        SoundsManager.instance.PlaySound("Good", true);
     }
 
     private void OnDisable()

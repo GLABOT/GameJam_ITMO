@@ -47,8 +47,17 @@ public class GameManager : MonoBehaviour
         CurrentQuest.instance.ChangeText("Скорректируйте курс подлодки вручную");
         TimeForQuests.instance.StartTimer(15);
         yield return new WaitForSeconds(18f);
-        //след мини игра
+        TurnOnTheLight();
     }
+
+    private IEnumerator TurnOnTheLight()
+    {
+        SoundsManager.instance.PlaySound("Signal", false);
+        CurrentQuest.instance.ChangeText("Включите свет, перезапустив генератор");
+        TimeForQuests.instance.StartTimer(20);
+        yield return new WaitForSeconds(25f);
+    }
+
 
 
     [System.Obsolete]
