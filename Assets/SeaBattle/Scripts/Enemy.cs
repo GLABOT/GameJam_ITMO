@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
         _currentLifeTime -= Time.deltaTime;
         if (_currentLifeTime <= 0)
         {
+
             Destroy(gameObject);
         }
         
