@@ -10,6 +10,7 @@ TagManager:
   - Music
   - Clicker
   - Health
+  - Submarine
   layers:
   - Default
   - TransparentFX

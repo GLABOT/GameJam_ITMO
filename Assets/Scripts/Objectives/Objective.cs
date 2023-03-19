@@ -24,7 +24,7 @@ public class Objective : MonoBehaviour
             Information.instance.ChangeText("Нажимайте на R много раз!");
         }
 
-        if (gameObject.tag == "Health")
+        if (gameObject.tag == "Submarine")
         {
             FadeInOut.sceneEnd = true;
         }
