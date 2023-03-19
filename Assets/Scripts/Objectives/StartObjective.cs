@@ -27,7 +27,7 @@ public class StartObjective : MonoBehaviour
     {
         float distance;
 
-        distance = Vector3.Distance(PlayerBehaviour.instance.transform.position, transform.position);
+        distance = Vector3.Distance(FirstPersonController.instance.transform.position, transform.position);
 
         if (ObjectiveStarted)
             return;
