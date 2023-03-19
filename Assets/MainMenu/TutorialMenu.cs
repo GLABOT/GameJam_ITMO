@@ -1,6 +1,5 @@
-using TMPro.EditorUtilities;
+
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TutorialMenu : MonoBehaviour
 {
