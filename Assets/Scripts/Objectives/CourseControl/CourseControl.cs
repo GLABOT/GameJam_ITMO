@@ -29,7 +29,7 @@ public class CourseControl : MonoBehaviour
         if (instance == null)
             instance = this;
 
-        Primer = transform.GetChild(1).GetComponent<Text>();
+        Primer = transform.GetChild(0).GetComponent<Text>();
 
         Primer.text = Primer1;
     }

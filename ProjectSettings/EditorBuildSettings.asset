@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/FirstPersonTestScene.unity
+    guid: 1a1d2b27c77f84dfc9a6ea73258ab975
+  - enabled: 1
+    path: Assets/SeaBattle/SeaBattle.unity
+    guid: 3461418f6f02e9043b33b8b6d8eb7ae1
   m_configObjects: {}
