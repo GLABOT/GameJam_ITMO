@@ -6,6 +6,10 @@ public class RebootReactor : MonoBehaviour
 {
     public static RebootReactor instance;
 
+    [SerializeField] private GameObject m_Valve;
+    private Animator _valveAnimator;
+    private int _animIDValveAction;
+
     public bool rebootStarted = false;
     bool holdEnded = false;
     bool rebooted = false;
@@ -18,7 +22,8 @@ public class RebootReactor : MonoBehaviour
     {
         if (instance == null)
             instance = this;
-
+        _valveAnimator = m_Valve.GetComponent<Animator>();
+        _animIDValveAction = Animator.StringToHash("Interact");
         ButtonDownTimerDelta = ButtonDownTimer;
     }
 
@@ -41,7 +46,7 @@ public class RebootReactor : MonoBehaviour
             {
                 //SoundAndMusic.instance.SpinCircle();
                 ButtonDownTimerDelta -= Time.deltaTime;
-
+                _valveAnimator.SetBool(_animIDValveAction, true);
                 Debug.Log("Осталось держать:" + ButtonDownTimerDelta);
             }
 
@@ -50,6 +55,7 @@ public class RebootReactor : MonoBehaviour
                 ReactorGame.instance.FixSmoke();
                 Information.instance.GetComponent<ShowOrHideUI>().Hide();
                 rebooted = true;
+                _valveAnimator.SetBool(_animIDValveAction, false);
                 Debug.Log("Успешно!");
                 SoundsManager.instance.PlaySound("Good", true);
             }
