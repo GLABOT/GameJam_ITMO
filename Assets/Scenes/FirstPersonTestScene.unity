@@ -900,6 +900,78 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
+  - name: Welcome
+    audioClip: {fileID: 8300000, guid: e97a412907f2b4e0fb0d886f7b1ba119, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: HowItGoes
+    audioClip: {fileID: 8300000, guid: ce128eeb54dc8422485bf5ff1aa127d9, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: CommunicationCenter
+    audioClip: {fileID: 8300000, guid: 6d200c88826094bc986c5d969c6bb39a, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: HealthZone
+    audioClip: {fileID: 8300000, guid: 029807a83c89444dab530eccd7989edb, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: ReactorPlace
+    audioClip: {fileID: 8300000, guid: d5bb56be425c34457b366f58ab658d2a, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Torpedo
+    audioClip: {fileID: 8300000, guid: 281804bcdacea4949b0043cad117d5dd, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: CursError
+    audioClip: {fileID: 8300000, guid: dbcdc71f8d6ab4be0b17795dec19daa5, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Enemy
+    audioClip: {fileID: 8300000, guid: 57a1f878c10cb49b296e40ec23f39ebc, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: HealthSupport
+    audioClip: {fileID: 8300000, guid: 16e42ac18bb4b4a8fa92970a77eeb3c6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: ReactorTrouble
+    audioClip: {fileID: 8300000, guid: 3bb03ec60d6604d7abdc59fb8c9beccf, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: GoodJob
+    audioClip: {fileID: 8300000, guid: 94ee92c7ecbbe463c858a83a924d4cd8, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: End
+    audioClip: {fileID: 8300000, guid: c0ea5942595eb4d4e94e21b629fe9bdf, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
   mainMixer: {fileID: 24300002, guid: e53c05e5f914f41338a5ec4e6b17ad9a, type: 2}
   effectsMixer: {fileID: 24300002, guid: d966ecf2871c441ca8507649ab8f64cb, type: 2}
   mainTheme: SoundTrack

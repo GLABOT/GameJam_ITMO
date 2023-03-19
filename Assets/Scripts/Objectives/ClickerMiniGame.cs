@@ -55,6 +55,7 @@ public class ClickerMiniGame : MonoBehaviour
         if (Input.GetKeyDown(_interactionButton))
         {
             m_Slider.value += _sumValue;
+            SoundsManager.instance.PlaySound("Good", true);
         }
     }
 
@@ -65,6 +66,9 @@ public class ClickerMiniGame : MonoBehaviour
         m_Message.gameObject.SetActive(false);
         gameObject.SetActive(false);
         Information.instance.HideInfo();
+        SoundsManager.instance.PlaySound("Signal", false);
+        TimeForQuests.instance.StopTimer();
+        CurrentQuest.instance.HideQuest();
     }
 
     private void Lose()
