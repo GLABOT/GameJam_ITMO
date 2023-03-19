@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerAim : MonoBehaviour
+public class Player : MonoBehaviour
 {
     private Camera _camera;
     [SerializeField] private GameObject _debugAimTarget;
@@ -11,6 +11,23 @@ public class PlayerAim : MonoBehaviour
     [SerializeField] private bool _canShoot = true;
     [SerializeField] private float _reloadTime = 1.5f;
     [SerializeField] private float _reloadTimeDelta;
+
+    private int health;
+    public int Health 
+    { 
+        get 
+        { 
+            return health;
+        } 
+        set
+        {
+            health = value;
+            if (health <= 0)
+            {
+                
+            }
+        }
+    }
 
     private void Awake()
     {
@@ -50,5 +67,14 @@ public class PlayerAim : MonoBehaviour
             _canShoot = false;
             _reloadTimeDelta = _reloadTime;
         }
+    }
+
+    private void Lose()
+    {
+
+    }
+    private void Win()
+    {
+
     }
 }
